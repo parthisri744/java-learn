@@ -1,20 +1,18 @@
+import javax.swing.*;  
 import java.awt.*;
-import java.awt.event.*;
-public class Test extends WindowAdapter {
-Frame f ;
-public Test() {
-f = new Frame("parthiban");
-f.addWindowListener(this);
-Image icon = Toolkit.getDefaultToolkit().getImage("parthiban.jpg");
-f.setIconImage(icon);
-f.setSize(200,200);
-f.setLayout(null);
-f.setVisible(true);
-}
-public void windowClosing(WindowEvent e) {
-f.dispose();
-}
-public static void main(String[] args) {
-new Test();
-}
-}
+public class Test {  
+public static void main(String[] args) {  
+JFrame f=new JFrame();//creating instance of JFrame  
+Button b1 = new Button("click");
+b1.setBounds(130,140,100,40);
+JButton b=new JButton("click");//creating instance of JButton  
+b.setBounds(130,100,100, 40);//x axis, y axis, width, height  
+    f.add(b1);      
+f.add(b);//adding button in JFrame  
+          
+f.setSize(400,500);//400 width and 500 height  
+f.setLayout(null);//using no layout managers  
+f.setVisible(true);//making the frame visible  
+}  
+}  
+
